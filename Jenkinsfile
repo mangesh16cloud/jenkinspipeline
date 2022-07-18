@@ -8,6 +8,7 @@ node {
         echo 'this is test stage'
     }
     stage('deployment') {
+        echo 'this is 1st deployment'
         echo 'this is deployment stage'
     }
 }
