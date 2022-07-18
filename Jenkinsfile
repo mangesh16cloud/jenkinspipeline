@@ -4,7 +4,7 @@ node {
         echo 'this is build from SCM'
     }
     stage('test') {
-        sh 'id'
+        sh 'w'
         echo 'this is test stage'
     }
     stage('deployment') {
