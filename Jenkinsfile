@@ -1,7 +1,7 @@
 node {
     stage('build') {
         sh 'java -version'
-        echo 'this is build stage'
+        echo 'this is build from SCM'
     }
     stage('test') {
         sh 'id'
