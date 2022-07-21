@@ -1,5 +1,5 @@
 pipeline {
-    agent {'1st-agent'}//ex: root
+    agent {'master'}//ex: root
 
     stages {
         stage('checkout') {
