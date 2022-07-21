@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('checkout') {
 	    agent {
-		lable 'master'
+		lable 'Built-In Node'
 	    }
             steps {
                 echo 'Hello World'
@@ -12,7 +12,7 @@ pipeline {
 		stash 'source'
             }
         }
-        stage('build') {
+        stage('1st-agent') {
 	    agent {
 		lable 'sonar-python'
 	    }
