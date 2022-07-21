@@ -1,10 +1,10 @@
 pipeline {
-    agent 
+    agent any
 
     stages {
         stage('checkout') {
 	    agent {
-		lable ('1st-agent')
+		lable ('any')
 	    }
             steps {
                 echo 'Hello World'
