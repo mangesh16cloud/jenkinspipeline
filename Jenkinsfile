@@ -14,7 +14,7 @@ pipeline {
         }
         stage('build') {
 	    agent {
-		lable 'sonar-python'
+		
 	    }
             steps {
 		unstash 'source'
