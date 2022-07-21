@@ -13,9 +13,6 @@ pipeline {
             }
         }
         stage('build') {
-	    agent {
-		
-	    }
             steps {
 		unstash 'source'
                 echo 'Hello World'
