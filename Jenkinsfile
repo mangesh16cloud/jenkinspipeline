@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('checkout') {
 	    agent {
-		lable ('any')
+		lable 'any'
 	    }
             steps {
                 echo 'Hello World'
