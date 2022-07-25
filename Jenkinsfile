@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+  label {
+    label 'slave'
+    retries 2
+  }
 
     stages {
         stage('checkout') {
