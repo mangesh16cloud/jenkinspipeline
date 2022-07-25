@@ -1,16 +1,20 @@
-node {
-    stage('build') {
-        sh 'java -version'
-        echo 'this is build from SCM'
-    }
-    stage('test') 
-	node ('slave')
-	{
-        sh 'w'
-        echo 'this is test stage'
-    }
-    stage('deployment') {
-        echo 'this is 1st deployment'
-        echo 'this is deployment stage'
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+	    
+            steps {
+		git branch: 'main', url: 'https://github.com/mangesh16cloud/jenkinspipeline.git'
+		stash 'source'
+            }
+        }
+        stage('build') {
+	    
+            steps {
+		unstash 'source'
+                echo 'Hello World'
+            }
+        }
     }
 }
