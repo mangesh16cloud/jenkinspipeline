@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('checkout') {
 	     agent {
- 	    label {
+ 	    	label {
     		label 'slave'
    		retries 2
 		}
@@ -12,6 +12,7 @@ pipeline {
 		stash 'source'
             }
         }
+	}
         stage('build') {
 	    
             steps {
