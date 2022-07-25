@@ -1,9 +1,11 @@
-node('slave') {
+node {
     stage('build') {
         sh 'java -version'
         echo 'this is build from SCM'
     }
-    stage('test') {
+    stage('test') 
+	node ('slave')
+	{
         sh 'w'
         echo 'this is test stage'
     }
