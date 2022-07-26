@@ -1,9 +1,5 @@
 pipeline {
   agent any
-	environment{
-		DOCKER_TAG = getDockerTag()
-	}
-	
     stages {
         stage('checkout') {
 	     agent { 
@@ -15,11 +11,10 @@ pipeline {
             }
         }
 	
-        stage('build with DOCKER IMG') {
+        stage('build') {
 	    
             steps {
 		unstash 'source'
-		sh "docker build . -t mangeshsk/test:${DOCKER_TAG}"
                 echo 'Hello World'
             }
         }
